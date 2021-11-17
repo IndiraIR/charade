@@ -44,7 +44,7 @@ import charades from '@/assets/json/charade.json'
 export default {
   data: () => {
     return {
-      label: 'Search',
+      label: 'Buscar',
       characters: [],
       search: '',
       page: 1,

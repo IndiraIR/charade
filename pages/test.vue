@@ -2,7 +2,7 @@
   <v-card class="mx-auto" max-width="850">
     <v-toolbar color="blue-grey" dark>
       <v-spacer></v-spacer>
-      <v-toolbar-title>All</v-toolbar-title>
+      <v-toolbar-title>Listadado</v-toolbar-title>
     </v-toolbar>
 
     <v-container fluid>

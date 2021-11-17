@@ -42,12 +42,12 @@ export default {
       items: [
         {
           icon: 'mdi-home',
-          title: 'Home',
+          title: 'Inicio',
           to: '/',
         },
         {
           icon: 'mdi-cards-club',
-          title: 'Cuba  - Charade',
+          title: 'Charada de Cuba',
           to: '/cuba',
         },
         {
@@ -57,7 +57,7 @@ export default {
         },
       ],
       miniVariant: false,
-      title: 'Charade',
+      title: 'Charada o Bolita',
     }
   },
 }

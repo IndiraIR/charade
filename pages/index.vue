@@ -3,13 +3,13 @@
     <v-col cols="12" sm="8" md="6">
       <v-card>
         <v-card-title class="headline justify-center" color="blue-grey">
-          Welcome to CHARADE
+         Bienvenido a la CHARADA
         </v-card-title>
         <v-spacer></v-spacer>
         <v-card-text>
-          <p>In Cuba the charada is a table of 100 numbers, the first 36 come from the Chinese Charada, and the rest come from the popular Cuban imagination. In the Cuban tradition, dreams are related to the charade numbers and their corresponding representations. </p>
+          <p>Muchas veces nos somprenden cosas de la vida diaria y queremos jugar algun número de lotería y no sabemos su significado... pues aqui tienes una buena herramienta </p>
 
-          <p>The interpretation of these dreams is often described as "cabal" in the neighborhoods of the country, and they are used to bet on the popular illicit game known as  La Bolita. </p>
+          <p>Hay personas que se lo han aprendido de memoria pero hay veces que se nos olivida. Este tipo de juego en Cuba se conoce com "La Bolita" </p>
         </v-card-text>
       </v-card>
     </v-col>
