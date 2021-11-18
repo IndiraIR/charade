@@ -7,7 +7,7 @@
 
     <v-container fluid>
       <v-row dense>
-        <v-col v-for="card in items" :key="card.id" :cols="dflex">
+        <v-col v-for="card in items" :key="card.id" :cols="cols">
           <v-card height="120">
             <v-card-title v-text="card.id"></v-card-title>
             <v-card-subtitle 
@@ -23,7 +23,7 @@
 import charades from '@/assets/json/charade.json'
 export default {
   data: () => ({
-    dflex: 3,
+    cols: 3,
     items : charades,
     
   }),

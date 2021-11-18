@@ -56,7 +56,7 @@ export default {
           to: '/test',
         },
       ],
-      miniVariant: false,
+      miniVariant: true,
       title: 'Charada o Bolita',
     }
   },

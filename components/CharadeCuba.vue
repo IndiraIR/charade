@@ -6,16 +6,17 @@
           <v-text-field
             v-model="search"
             :label="label"
-            clearable
             append-icon="mdi-magnify"
+            clearable
+            @click:clear="clearMessage"
           ></v-text-field>
         </v-col>
       </v-row>
-      
+
       <v-row
         v-for="(item, index) in filteredCharacters"
         v-show="(page - 1) * per_page <= index && page * per_page > index"
-        :key="item.id"
+        :key="index"
         justify="center"
         align="center"
       >
@@ -28,10 +29,10 @@
           {{ item.words.toString().replace(/,/g, ', ') }}
         </v-col>
       </v-row>
-      <div v-if="search.length === 0" class="text-center">
+      <div v-if="filteredCharacters.length > 0 && itemsPage > 1" class="text-center">
         <v-pagination
           v-model="page"
-          :length="Math.round(filteredCharacters.length / per_page)"
+          :length="itemsPage"
           circle
         ></v-pagination>
       </div>
@@ -45,7 +46,7 @@ export default {
   data: () => {
     return {
       label: 'Buscar',
-      characters: [],
+      characters: charades,
       search: '',
       page: 1,
       per_page: 10,
@@ -65,6 +66,7 @@ export default {
       if (!this.search) return this.characters
 
       return this.characters.filter((character) => {
+        this.page = 1
         return character.words.find((field) => {
           const slugify = (text) =>
             Object.keys(this.accentsMap).reduce(
@@ -77,13 +79,15 @@ export default {
         })
       })
     },
+    itemsPage() {
+      return Math.round(this.filteredCharacters.length / this.per_page)
+    },
   },
-  created() {
-    this.fetchAllCharacters()
-  },
+
   methods: {
-    fetchAllCharacters() {
-      this.characters = charades
+    clearMessage() {
+      this.search = ''
+      this.page = 1
     },
   },
 }
