@@ -29,12 +29,11 @@
           {{ item.words.toString().replace(/,/g, ', ') }}
         </v-col>
       </v-row>
-      <div v-if="filteredCharacters.length > 0 && itemsPage > 1" class="text-center">
-        <v-pagination
-          v-model="page"
-          :length="itemsPage"
-          circle
-        ></v-pagination>
+      <div
+        v-if="filteredCharacters.length > 0 && itemsPage > 1"
+        class="text-center"
+      >
+        <v-pagination v-model="page" :length="itemsPage" circle></v-pagination>
       </div>
     </v-container>
   </v-main>
@@ -75,7 +74,10 @@ export default {
               text
             )
           field = slugify(field)
-          return field.toLowerCase().includes(this.search.toLowerCase().trim())
+        
+          const searchMy = slugify(this.search)
+          
+          return field.toLowerCase().includes(searchMy.toLowerCase().trim())
         })
       })
     },
